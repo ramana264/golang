@@ -1,19 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/ramana264/golang/mathops"
+)
 
 func main() {
-	var a, b int
-
+	var num1, num2 int
 	fmt.Print("Enter first number: ")
-	fmt.Scanln(&a)
-
+	fmt.Scan(&num1)
 	fmt.Print("Enter second number: ")
-	fmt.Scanln(&b)
+	fmt.Scan(&num2)
 
-	sum := a + b
-	product := a * b
-
-	fmt.Printf("Sum: %d\n", sum)
-	fmt.Printf("Product: %d\n", product)
+	fmt.Println("Sum:", mathops.Add(num1, num2))
+	fmt.Println("Product:", mathops.Multiply(num1, num2))
 }
